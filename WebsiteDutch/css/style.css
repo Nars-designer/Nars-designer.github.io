@@ -154,47 +154,47 @@ h2{
 
 @media (orientation: landscape){ 
 	#keyart-0 {
-		background-image: url('../images/Horizontal/Laag%200BG.png');
+		background-image: url('../images/Horizontal/Laag0.png');
         background-position: center top;
         background-size: cover;
 	    width: 100vw;
 	}
 	#keyart-1 {
-		background-image: url('../images/Horizontal/Laag%201.png');
+		background-image: url('../images/Horizontal/Laag1.png');
         background-position: right 75vw bottom 58vh;
 	    width: 100vw;
 	}
 	#keyart-2 {
-		background-image: url('../images/Horizontal/Laag%202.png');
+		background-image: url('../images/Horizontal/Laag2.png');
         background-position: right 24vw bottom 60vh;
 	    width: 100%;
 	}
     
 	#keyart-3 {
-		background-image: url('../images/Horizontal/Laag%203.png');
+		background-image: url('../images/Horizontal/Laag3.png');
         background-position: right bottom 42vh;
 	    width: 100%;
 	}
     
 	#keyart-4 {
-		background-image: url('../images/Horizontal/Laag%204.png');
+		background-image: url('../images/Horizontal/Laag4.png');
         background-position: right bottom 21vh;
 	    background-size: auto;
 	    background-repeat: no-repeat;
 	    width: 100%;
 	}
 	#keyart-5 {
-		background-image: url('../images/Horizontal/Laag%205.png');
+		background-image: url('../images/Horizontal/Laag5.png');
         background-position: right bottom 25vh;
 	    width: 100%;
 	}
 	#keyart-6 {
-		background-image: url('../images/Horizontal/Laag%206.png');
+		background-image: url('../images/Horizontal/Laag6.png');
         background-position: left -17vw bottom 25vh;
 	    width: 100%;
 	}
 	#keyart-7 {
-		background-image: url('../images/Horizontal/laag%207.png');
+		background-image: url('../images/Horizontal/laag7.png');
         background-position: left bottom 28vh;
         background-size: 80%;
 	    width: 100%;
@@ -256,7 +256,7 @@ h2{
 
 .middle{
   position: absolute;
-  top: 90%;
+  top: 22%;
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 14;
