@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Santana';
+    src: url('../fonts/Santana/Santana.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+	text-align: center;
+	background-color: #dcdcdc;
+}
+
+#main-img{
+	background-color: rgba(108, 115, 108, 0.9);
+	width: 20%;
+	margin-top: 50px;
+	margin: 0 auto;
+	color: #dcdcdc;
+	font-family: 'Santana';
+	padding: 5%;
+}
+
+a{
+	text-decoration: none;
+	background-color: #484D48;
+	color: #dcdcdc;
+	font-family: 'Santana';
+	padding: 2%;
+}
+
+a:hover{
+	
+}
