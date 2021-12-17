@@ -146,7 +146,25 @@ video1.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[Who are Dean and Brando?|3.Goldfish]]&lt;/p&gt; &lt;p&gt;[[Are other houses different?|9.LivingConditions]]&lt;/p&gt; &lt;p&gt;[[A nurse around?|6.Nurse1]]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;3.Goldfish&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Who are Dean and Brando?|3.Goldfish]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;9.LivingConditions&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Are other houses different?|9.LivingConditions]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;6.Nurse&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[A nurse around?|6.Nurse1]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -199,7 +217,25 @@ video2.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[Are all houses in this neighbourhood as clean as yours?|9.LivingConditions]]&lt;/p&gt; &lt;p&gt;[[Where is your kitchen?|5.Kitchen]]&lt;/p&gt; &lt;p&gt;[[What about your radio?|4.Radio]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;9.LivingConditions&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Are all houses as clean as yours?|9.LivingConditions]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;5.Kitchen&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Where is your kitchen?|5.Kitchen]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;4.Radio&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What about your radio?|4.Radio]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -246,12 +282,29 @@ video3.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break3.currentTime = 0;
   break3.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="6.Nurse1" tags="" position="460,437" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieMobile/6.Nurse.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="6.Nurse1" tags="" position="461,436" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieMobile/6.Nurse.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
 &lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieMobile/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[But do you still live with your parents?|2.Home]]&lt;/p&gt; &lt;p&gt;[[White Yellow Cross?|7.Nurse2]]&lt;/p&gt; &lt;p&gt;[[Can you tell me a story from work?|10.Petronella]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;2.Home&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[But do you still live with your parents?|2.Home]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;7.Nurse2&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[White Yellow Cross?|7.Nurse2]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;10.Petronella&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Can you tell me a story from work?|10.Petronella]] 
+]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -304,7 +357,25 @@ video4.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[What is your field of work?|6.Nurse1]]&lt;/p&gt; &lt;p&gt;[[What are your other friends doing?|10.Petronella]]&lt;/p&gt; &lt;p&gt;[[Where is your kitchen?|5.Kitchen]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;6.Nurse1&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What is your field of work?|6.Nurse1]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;5.Kitchen&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Where is your kitchen?|5.Kitchen]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;10.Petronella&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What are your other friends doing?|10.Petronella]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -406,7 +477,25 @@ h1 {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[Radio |4.Radio]]&lt;/p&gt; &lt;p&gt;[[Friend |10.Petronella]]&lt;/p&gt; &lt;p&gt;[[living conditions|9.LivingConditions]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;6.Nurse1&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Why does everything has to be clean?|6.Nurse1]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;4.Radio&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What about your radio?|4.Radio]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;10.Petronella&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[How are other women doing their chores?|10.Petronella]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -458,7 +547,25 @@ video7.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[What do you do when work is over?|4.Radio]]&lt;/p&gt; &lt;p&gt;[[Can you tell me a story from work?|10.Petronella]]&lt;/p&gt; &lt;p&gt;[[Were all of them like that?|8.NotAllBad]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;8.NotAllBad&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Were all of them like that?|8.NotAllBad]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;4.Radio&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What do you do when work is over?|4.Radio]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;10.Petronella&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Can you tell me a story from work?|10.Petronella]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -510,7 +617,25 @@ video6.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[What about your house?|2.Home]]&lt;/p&gt; &lt;p&gt;[[Aren&#39;t the residents trying to keep it clean?|10.Petronella]]&lt;/p&gt; &lt;p&gt;[[Why is hygiene so important for you?|6.Nurse1]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;2.Home&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What about your house?|2.Home]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;10.Petronella&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Aren&#39;t the residents trying?|10.Petronella]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;6.Nurse1&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Why is hygiene so important for you?|6.Nurse1]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -562,7 +687,25 @@ video8.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[How are you spending your free time, then?|4.Radio]]&lt;/p&gt; &lt;p&gt;[[How is technology saving time for you?|5.Kitchen]]&lt;/p&gt; &lt;p&gt;[[Why were you looking after her children?|6.Nurse1]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;4.Radio&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[How are you spending your free time, then?|4.Radio]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;5.Kitchen&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[How is technology saving time for you?|5.Kitchen]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;6.Nurse1&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[Why were you looking after her children?|6.Nurse1]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -614,7 +757,25 @@ video9.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[What about the radio?|4.Radio]]&lt;/p&gt; &lt;p&gt;[[What about your kitchen?|5.Kitchen]]&lt;/p&gt; &lt;p&gt;[[How is it for your house?|2.Home]]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;2.Home&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[How is it for your house?|2.Home]]
+]&lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;4.Radio&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What about the radio?|4.Radio]]
+]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;5.Kitchen&quot;)[
+	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
+]
+(else:)[
+    [[What about your kitchen?|5.Kitchen]]
+]&lt;/p&gt;
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
@@ -719,6 +880,21 @@ video12.addEventListener(&#39;ended&#39;, (event) =&gt; {
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
 &lt;p&gt;[[What about the radio?|4.Radio]]&lt;/p&gt; &lt;p&gt;[[Is this your house?|2.Home]]&lt;/p&gt; &lt;p&gt;[[Goodbye|12.End]] &lt;/p&gt;
+&lt;p&gt;(if:(history: ) contains &quot;4.Radio&quot;)[
+	[[Goodbye|12.End]]
+]
+(else:)[
+    [[What about the radio?|4.Radio]]
+]&lt;/p&gt;
+&lt;p&gt;[[Goodbye|12.End]]&lt;/p&gt; 
+&lt;p&gt;(if:(history: ) contains &quot;3.Goldfish&quot;)[
+	[[Goodbye|12.End]]
+]
+(else:)[
+    [[But, I still don&#39;t know your Goldfish|3.Goldfish]]
+]&lt;/p&gt;
+
+
 &lt;/div&gt;&lt;/nav&gt;
 
 &lt;style&gt;
