@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Vid_prototype_1.1 Corrie.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Vid_prototype_1.1 Corrie" startnode="6" creator="Twine" creator-version="2.3.15" ifid="9C48335D-D78B-4D93-BE5A-67D26FC72A85" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+<tw-storydata name="Vid_prototype_1.1 Corrie" startnode="6" creator="Twine" creator-version="2.3.15" ifid="9C48335D-D78B-4D93-BE5A-67D26FC72A85" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *::-webkit-media-controls-panel {
   display: none!important;
  -webkit-appearance: none;
@@ -46,7 +46,8 @@ tw-story {
 tw-link {
   	font-family: 'Roboto', sans-serif;
     color: black;
-    font-size: 2.8vw;
+    font-size: 3vw;
+	line-height: 1em; 
 }
 
 tw-link:hover{
@@ -56,9 +57,10 @@ tw-link:hover{
 nav{
   position: absolute;
   width: 100vw;
-  top: 80vh;
+  bottom: -75vh;
   left: 0; 
   right: 0;
+  z-index: 1000;
 }
 
 div ,p{
@@ -83,20 +85,21 @@ p {
 	justify-content: center;
   	text-align: center;
   	margin: 2%;
-  	padding: 2.5%;
+  	padding: 3%;
   	background-color: #f2f2f2;
     border-radius: 5px;
     box-shadow: 5px 5px 15px #404040;
-	line-height: 33px; 
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="455,297" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/1.Begin.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="455,297" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/1.Begin.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[Is this your house?|2.Home]]&lt;/p&gt; &lt;p&gt;[[What are you working as?|6.Nurse1]]&lt;/p&gt; &lt;p&gt;[[How are the living conditions here?|9.LivingConditions]] &lt;/p&gt;
+&lt;p&gt;[[Is this your house?|2.Home]]&lt;/p&gt; &lt;p&gt;[[What are you working as?|6.Nurse1]]&lt;/p&gt; &lt;p&gt;[[How are the living conditions around here?|9.LivingConditions]] &lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -144,8 +147,8 @@ video1.addEventListener(&#39;ended&#39;, (event) =&gt; {
 })
 &lt;/script&gt;
 
-</tw-passagedata><tw-passagedata pid="2" name="2.Home" tags="" position="317,439" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/2.House.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+</tw-passagedata><tw-passagedata pid="2" name="2.Home" tags="" position="317,439" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/2.House.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -161,12 +164,14 @@ video1.addEventListener(&#39;ended&#39;, (event) =&gt; {
 (else:)[
     [[Are other houses different?|9.LivingConditions]]
 ]&lt;/p&gt; 
-&lt;p&gt;(if:(history: ) contains &quot;6.Nurse1&quot;)[
+&lt;p&gt;(if:(history: ) contains &quot;6.Nurse&quot;)[
 	[[I don&#39;t have any more questions.|11.IsThereAnythingElse]]
 ]
 (else:)[
     [[A nurse around?|6.Nurse1]]
 ]&lt;/p&gt;&lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -213,8 +218,8 @@ video2.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break2.play();
 })
 &lt;/script&gt;
-{</tw-passagedata><tw-passagedata pid="3" name="3.Goldfish" tags="" position="313,565" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/3.Goldfish.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+{</tw-passagedata><tw-passagedata pid="3" name="3.Goldfish" tags="" position="313,565" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/3.Goldfish.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -237,6 +242,8 @@ video2.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[What about your radio?|4.Radio]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -282,8 +289,8 @@ video3.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break3.currentTime = 0;
   break3.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="6.Nurse1" tags="" position="458,438" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/6.Nurse.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="6.Nurse1" tags="" position="458,438" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/6.Nurse.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -306,6 +313,8 @@ video3.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[Can you tell me a story from work?|10.Petronella]] 
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -352,8 +361,8 @@ video4.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break4.play();
 })
 &lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="5" name="4.Radio" tags="" position="321,695" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/4.Radio.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+</tw-passagedata><tw-passagedata pid="5" name="4.Radio" tags="" position="321,695" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/4.Radio.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -376,6 +385,8 @@ video4.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[What are your other friends doing?|10.Petronella]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -437,7 +448,7 @@ We are Team Klompen Mafia and we are currently working on a project for Het Nede
 
 Our idea is to hang interactive portraits in one of the houses in the museum. These portraits allow visitors to interact with former residents. This prototype shows what would be displayed at the touchscreens in the houses. (currently the spoken text is only available in Dutch but we are planning to make it accesible for other languages in the future). ] &lt;br&gt;&lt;/br&gt;
 
-&lt;p&gt;[[Volgende / Next |Begin]]&lt;/p&gt;
+&lt;p&gt;(link-fullscreen: &quot;Open in Fullscreen&quot;, &quot;[[Volgende/Next -&gt;Begin]]&quot;,&quot;[[Volgende/Next -&gt;Begin]]&quot;)&lt;/p&gt;
 
 &lt;style&gt;
 
@@ -471,8 +482,8 @@ h1 {
 }
 
 &lt;/style&gt;
-</tw-passagedata><tw-passagedata pid="7" name="5.Kitchen" tags="" position="459,699" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/5.Kitchen.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+</tw-passagedata><tw-passagedata pid="7" name="5.Kitchen" tags="" position="459,699" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/5.Kitchen.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -495,6 +506,8 @@ h1 {
     [[How are other women doing their chores?|10.Petronella]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -540,8 +553,8 @@ video7.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break7.currentTime = 0;
   break7.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="8" name="7.Nurse2" tags="" position="459,562" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/7.Untainted.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="8" name="7.Nurse2" tags="" position="459,562" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/7.Untainted.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -564,6 +577,8 @@ video7.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[Can you tell me a story from work?|10.Petronella]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -609,8 +624,8 @@ video6.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break6.currentTime = 0;
   break6.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="9" name="9.LivingConditions" tags="" position="594,438" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/9.Living Conditions.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="9" name="9.LivingConditions" tags="" position="595,438" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/9.Living Conditions.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -633,6 +648,8 @@ video6.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[Why is hygiene so important for you?|6.Nurse1]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -678,8 +695,8 @@ video8.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break8.currentTime = 0;
   break8.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="10" name="10.Petronella" tags="" position="593,564" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/10.Petronella.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="10" name="10.Petronella" tags="" position="593,564" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/10.Petronella.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -702,6 +719,8 @@ video8.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[Why were you looking after her children?|6.Nurse1]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -747,8 +766,8 @@ video9.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break9.currentTime = 0;
   break9.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="8.NotAllBad" tags="" position="594,695" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/8.Not_all_bad.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="8.NotAllBad" tags="" position="594,695" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/8.Not_all_bad.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
@@ -771,6 +790,8 @@ video9.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[What about your kitchen?|5.Kitchen]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -816,13 +837,15 @@ video10.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break10.currentTime = 0;
   break10.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="12" name="12.End" tags="" position="755,900" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/12.End.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="12" name="12.End" tags="" position="755,899" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/11.Anything_else.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
 &lt;p&gt;[[Re-start|Start]]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -868,12 +891,11 @@ video12.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break12.currentTime = 0;
   break12.play();
 })
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="11.IsThereAnythingElse" tags="" position="593,898" size="100,100">&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/11.Anything_else.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
-&lt;video autoplay class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="11.IsThereAnythingElse" tags="" position="593,898" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/12.End.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
 &lt;nav&gt;&lt;div id=&quot;btns&quot;&gt;
-&lt;p&gt;[[What about the radio?|4.Radio]]&lt;/p&gt; &lt;p&gt;[[Is this your house?|2.Home]]&lt;/p&gt; &lt;p&gt;[[Goodbye|12.End]] &lt;/p&gt;
 &lt;p&gt;(if:(history: ) contains &quot;4.Radio&quot;)[
 	[[Goodbye|12.End]]
 ]
@@ -888,6 +910,8 @@ video12.addEventListener(&#39;ended&#39;, (event) =&gt; {
     [[But, I still don&#39;t know your Goldfish|3.Goldfish]]
 ]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
+
+(live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
 
 &lt;style&gt;
 .myVideo {
@@ -917,7 +941,7 @@ const video11 = document.getElementById(&#39;Source&#39;);
 const break11 = document.getElementById(&#39;Break&#39;);
 ended = false;
 
-video4.addEventListener(&#39;ended&#39;, (event) =&gt; {
+video11.addEventListener(&#39;ended&#39;, (event) =&gt; {
   var div = document.getElementById(&#39;btns&#39;);
   
   if(!ended){
@@ -933,7 +957,28 @@ video4.addEventListener(&#39;ended&#39;, (event) =&gt; {
   break11.currentTime = 0;
   break11.play();
 })
-&lt;/script&gt;</tw-passagedata></tw-storydata>
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="Break" tags="" position="741,299" size="100,100">&lt;video autoplay loop playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;CorrieTablet/13.Idle.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+
+&lt;p id=&quot;Again&quot;&gt;[[Hello!|Begin]]&lt;/p&gt; 
+
+&lt;style&gt;
+.myVideo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  margin-left: auto;
+}
+
+#Again{
+  	width: 35%;
+	margin: 0 auto;
+  	bottom: -85vh;
+    color: black;
+}
+&lt;/style&gt;
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
