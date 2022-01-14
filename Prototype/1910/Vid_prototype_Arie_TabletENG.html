@@ -477,7 +477,7 @@ h1 {
 }
 
 &lt;/style&gt;
-</tw-passagedata><tw-passagedata pid="7" name="5gas light" tags="" position="319,700" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;ArieTabletENG/5gaslight.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
+</tw-passagedata><tw-passagedata pid="7" name="5gas light" tags="" position="318,699" size="100,100">&lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;ArieTabletENG/5gaslight.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
 &lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;ArieTabletENG/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
 
@@ -935,25 +935,25 @@ video11.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/style&gt;
 
 &lt;script&gt;
-const video12 = document.getElementById(&#39;Source&#39;);
-const break12 = document.getElementById(&#39;Break&#39;);
+const video19 = document.getElementById(&#39;Source&#39;);
+const break19 = document.getElementById(&#39;Break&#39;);
 ended = false;
 
-video12.addEventListener(&#39;ended&#39;, (event) =&gt; {
+video19.addEventListener(&#39;ended&#39;, (event) =&gt; {
   var div = document.getElementById(&#39;btns&#39;);
   
   if(!ended){
   div.style.display = &quot;flex&quot;;
-  video12.style.display = &quot;none&quot;;
-  break12.style.display = &quot;block&quot;;
-  break12.play();
+  video19.style.display = &quot;none&quot;;
+  break19.style.display = &quot;block&quot;;
+  break19.play();
   ended = true;  
   }
 
 });
-  break12.addEventListener(&#39;ended&#39;, (event) =&gt; {
-  break12.currentTime = 0;
-  break12.play();
+  break19.addEventListener(&#39;ended&#39;, (event) =&gt; {
+  break19.currentTime = 0;
+  break19.play();
 })
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="Break" tags="" position="901,173" size="100,100">&lt;video autoplay loop playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;ArieTabletENG/13.Idle.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
 

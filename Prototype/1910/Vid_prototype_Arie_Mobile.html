@@ -232,7 +232,7 @@ video2.addEventListener(&#39;ended&#39;, (event) =&gt; {
 (else:)[
     [[Heb je licht in dit huis?|5gas light]]
 ]&lt;/p&gt; 
-p&gt;[[Ik heb geen vragen meer.|19end]]&lt;/p&gt;
+&lt;p&gt;[[Ik heb geen vragen meer.|19end]]&lt;/p&gt;
 &lt;/div&gt;&lt;/nav&gt;
 
 (live: 300s)[(reload:)(go-to: &quot;Break&quot;)]
@@ -887,7 +887,7 @@ video11.addEventListener(&#39;ended&#39;, (event) =&gt; {
 })
 &lt;/script&gt;
 
-</tw-passagedata><tw-passagedata pid="13" name="19end" tags="" position="899,299" size="100,100">
+</tw-passagedata><tw-passagedata pid="13" name="19end" tags="" position="895,298" size="100,100">
 &lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;AriePhoneNL/19end.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Source&quot;&gt; &lt;/video&gt;
 &lt;video autoplay playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;AriePhoneNL/13.Idle.mp4&quot; type=&quot;video/mp4&quot; id=&quot;Break&quot;&gt;
 &lt;/video&gt;
@@ -922,25 +922,25 @@ video11.addEventListener(&#39;ended&#39;, (event) =&gt; {
 &lt;/style&gt;
 
 &lt;script&gt;
-const video12 = document.getElementById(&#39;Source&#39;);
-const break12 = document.getElementById(&#39;Break&#39;);
+const video19 = document.getElementById(&#39;Source&#39;);
+const break19 = document.getElementById(&#39;Break&#39;);
 ended = false;
 
-video12.addEventListener(&#39;ended&#39;, (event) =&gt; {
+video19.addEventListener(&#39;ended&#39;, (event) =&gt; {
   var div = document.getElementById(&#39;btns&#39;);
   
   if(!ended){
   div.style.display = &quot;flex&quot;;
-  video12.style.display = &quot;none&quot;;
-  break12.style.display = &quot;block&quot;;
-  break12.play();
+  video19.style.display = &quot;none&quot;;
+  break19.style.display = &quot;block&quot;;
+  break19.play();
   ended = true;  
   }
 
 });
-  break12.addEventListener(&#39;ended&#39;, (event) =&gt; {
-  break12.currentTime = 0;
-  break12.play();
+  break19.addEventListener(&#39;ended&#39;, (event) =&gt; {
+  break19.currentTime = 0;
+  break19.play();
 })
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="Break" tags="" position="901,173" size="100,100">&lt;video autoplay loop playsinline=&quot;true&quot; disablePictureInPicture=&quot;true&quot; class=&quot;myVideo&quot; src=&quot;AriePhoneNL/13.Idle.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
 
